@@ -1,3 +1,31 @@
 body {
-    background-color: skyblue;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.home-hero {
+    background: linear-gradient(135deg, #11233f 0%, #245a82 100%);
+    color: #fff;
+}
+
+.home-hero__badge {
+    letter-spacing: 0.08em;
+}
+
+.feature-card {
+    height: 100%;
+    border: 0;
+    box-shadow: 0 0.75rem 2rem rgba(23, 32, 51, 0.08);
+}
+
+.feature-card__icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5f2fb;
+    color: #176b9d;
+    font-weight: 700;
 }
