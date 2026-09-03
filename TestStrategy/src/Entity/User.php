@@ -53,6 +53,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Appointment::class)]
     private Collection $appointments;
 
+    #[ORM\OneToOne(mappedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?NotificationPreference $notificationPreference = null;
+
     public function __construct()
     {
         $now = new \DateTimeImmutable();
@@ -209,6 +212,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function removeAppointment(Appointment $appointment): static
     {
         $this->appointments->removeElement($appointment);
+
+        return $this;
+    }
+
+    public function getNotificationPreference(): ?NotificationPreference
+    {
+        return $this->notificationPreference;
+    }
+
+    public function setNotificationPreference(?NotificationPreference $notificationPreference): static
+    {
+        $this->notificationPreference = $notificationPreference;
 
         return $this;
     }
