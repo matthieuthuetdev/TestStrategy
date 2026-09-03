@@ -52,6 +52,9 @@ class Schedule
     #[ORM\OneToMany(mappedBy: 'schedule', targetEntity: Appointment::class, orphanRemoval: true)]
     private Collection $appointments;
 
+    #[ORM\OneToOne(mappedBy: 'schedule', cascade: ['persist', 'remove'])]
+    private ?ScheduleCustomization $customization = null;
+
     public function __construct()
     {
         $now = new \DateTimeImmutable();
@@ -221,6 +224,18 @@ class Schedule
     public function removeAppointment(Appointment $appointment): static
     {
         $this->appointments->removeElement($appointment);
+
+        return $this;
+    }
+
+    public function getCustomization(): ?ScheduleCustomization
+    {
+        return $this->customization;
+    }
+
+    public function setCustomization(?ScheduleCustomization $customization): static
+    {
+        $this->customization = $customization;
 
         return $this;
     }
