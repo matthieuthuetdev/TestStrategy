@@ -5,110 +5,94 @@
 {% block body %}
     <main>
         <section class="home-hero py-5">
-            <div class="container py-5">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-8">
-                        <span class="home-hero__badge badge rounded-pill text-bg-light mb-3">ORGANISER. PARTAGER. RÉSERVER.</span>
-                        <h1 class="display-3 fw-bold mb-4">TestStrategy</h1>
-                        <p class="lead mb-4">
-                            Une solution claire pour organiser vos disponibilités et permettre à vos contacts de
-                            réserver un rendez-vous au moment qui leur convient.
-                        </p>
-                        <p class="mb-0">
-                            Créez votre agenda en quelques étapes, partagez votre lien personnel et gardez une vue
-                            d'ensemble sur toutes vos demandes et vos rendez-vous depuis un seul espace.
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="bg-white text-dark rounded-4 p-4 shadow-lg">
-                            <p class="text-uppercase text-secondary small fw-semibold mb-2">Votre organisation</p>
-                            <h2 class="h4">Un agenda adapté à votre rythme</h2>
-                            <p class="mb-0">
-                                Définissez vos règles de disponibilité et laissez TestStrategy proposer uniquement
-                                les créneaux réellement réservables.
-                            </p>
-                        </div>
-                    </div>
+            <div class="container py-5 text-center">
+                <span class="home-hero__badge badge rounded-pill text-bg-light mb-3">ORGANISER. PARTAGER. RÉSERVER.</span>
+                <h1 class="display-3 fw-bold mb-4">TestStrategy</h1>
+                <p class="lead mx-auto mb-4" style="max-width: 760px;">
+                    Une solution simple pour organiser vos disponibilités et permettre à vos contacts de réserver un
+                    rendez-vous au moment qui leur convient.
+                </p>
+                <p class="mx-auto mb-4" style="max-width: 680px;">
+                    Créez votre agenda, définissez vos horaires et partagez votre lien personnel. TestStrategy vous
+                    aide à centraliser vos demandes et vos rendez-vous dans un espace clair et accessible.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a class="btn btn-light btn-lg px-4" href="/register">Créer un compte</a>
+                    <a class="btn btn-outline-light btn-lg px-4" href="/login">Se connecter</a>
                 </div>
             </div>
         </section>
 
         <section class="py-5">
             <div class="container py-4">
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-8">
-                        <p class="text-primary text-uppercase fw-semibold small mb-2">Une prise de rendez-vous plus simple</p>
-                        <h2 class="display-6 fw-bold">Tout ce qu'il faut pour gérer vos disponibilités</h2>
-                        <p class="lead text-secondary mb-0">
-                            TestStrategy accompagne aussi bien la personne qui propose un rendez-vous que celle qui
-                            souhaite en réserver un, avec un parcours compréhensible et des vérifications à chaque étape.
-                        </p>
-                    </div>
+                <div class="text-center mx-auto mb-5" style="max-width: 760px;">
+                    <p class="text-primary text-uppercase fw-semibold small mb-2">La prise de rendez-vous simplifiée</p>
+                    <h2 class="display-6 fw-bold">Les fonctionnalités essentielles, au même endroit</h2>
+                    <p class="lead text-secondary mb-0">
+                        Que vous proposiez un créneau ou que vous souhaitiez prendre rendez-vous, TestStrategy rend
+                        chaque étape plus claire et vérifie les informations importantes avant l'enregistrement.
+                    </p>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-md-6 col-xl-4">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
                         <article class="feature-card card rounded-4 p-4">
                             <span class="feature-card__icon mb-3">01</span>
-                            <h3 class="h4">Un agenda personnel</h3>
+                            <h3 class="h4">Créer et partager un agenda</h3>
                             <p class="text-secondary mb-0">
-                                Chaque utilisateur connecté peut créer son propre agenda et obtenir un lien unique à
-                                partager avec les personnes qu'il souhaite recevoir.
+                                Un utilisateur connecté peut créer son agenda, obtenir un lien unique et le partager
+                                facilement avec les personnes qui souhaitent réserver un rendez-vous.
                             </p>
                         </article>
                     </div>
-
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col">
                         <article class="feature-card card rounded-4 p-4">
                             <span class="feature-card__icon mb-3">02</span>
-                            <h3 class="h4">Des disponibilités maîtrisées</h3>
+                            <h3 class="h4">Définir ses disponibilités</h3>
                             <p class="text-secondary mb-0">
-                                Configurez vos horaires pour chaque jour, la durée des rendez-vous et le temps de
-                                pause à respecter entre deux réservations.
+                                Configurez vos horaires pour chaque jour, la durée des rendez-vous, le temps entre deux
+                                créneaux et les périodes pendant lesquelles vous êtes exceptionnellement indisponible.
                             </p>
                         </article>
                     </div>
-
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col">
                         <article class="feature-card card rounded-4 p-4">
                             <span class="feature-card__icon mb-3">03</span>
-                            <h3 class="h4">Des indisponibilités ponctuelles</h3>
+                            <h3 class="h4">Réserver avec ou sans compte</h3>
                             <p class="text-secondary mb-0">
-                                Ajoutez des périodes exceptionnelles pendant lesquelles vous ne pouvez pas recevoir de
-                                rendez-vous afin qu'elles soient automatiquement exclues des créneaux proposés.
+                                Un visiteur peut consulter les créneaux disponibles, renseigner ses informations et
+                                demander un rendez-vous sans créer de compte. Un utilisateur connecté conserve ses
+                                réservations dans son espace personnel.
                             </p>
                         </article>
                     </div>
-
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col">
                         <article class="feature-card card rounded-4 p-4">
                             <span class="feature-card__icon mb-3">04</span>
-                            <h3 class="h4">Une réservation accessible</h3>
+                            <h3 class="h4">Éviter les conflits</h3>
                             <p class="text-secondary mb-0">
-                                Un visiteur peut consulter les créneaux disponibles depuis votre lien, choisir un
-                                horaire et demander un rendez-vous sans devoir créer de compte.
+                                Avant de confirmer une demande, le système vérifie la validité des informations, la
+                                disponibilité du créneau, les rendez-vous existants et les règles de votre agenda.
                             </p>
                         </article>
                     </div>
-
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col">
                         <article class="feature-card card rounded-4 p-4">
                             <span class="feature-card__icon mb-3">05</span>
-                            <h3 class="h4">Des réservations vérifiées</h3>
+                            <h3 class="h4">Gérer les demandes</h3>
                             <p class="text-secondary mb-0">
-                                Avant l'enregistrement, le système contrôle la validité des informations, la
-                                disponibilité du créneau, les conflits et les règles de votre agenda.
+                                Le détenteur de l'agenda reçoit les demandes de rendez-vous et peut les accepter ou les
+                                refuser. Les utilisateurs concernés sont informés de l'évolution de la réservation.
                             </p>
                         </article>
                     </div>
-
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col">
                         <article class="feature-card card rounded-4 p-4">
                             <span class="feature-card__icon mb-3">06</span>
-                            <h3 class="h4">Des demandes confirmées</h3>
+                            <h3 class="h4">Recevoir des notifications</h3>
                             <p class="text-secondary mb-0">
-                                Le détenteur de l'agenda reçoit la demande, puis peut l'accepter ou la refuser. Les
-                                personnes concernées sont informées de l'évolution du rendez-vous.
+                                Les e-mails permettent de suivre les demandes et les validations. Les utilisateurs
+                                connectés peuvent aussi choisir de recevoir un rappel avant leur rendez-vous.
                             </p>
                         </article>
                     </div>
@@ -118,47 +102,37 @@
 
         <section class="bg-white py-5">
             <div class="container py-4">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-5">
-                        <p class="text-primary text-uppercase fw-semibold small mb-2">Avec un compte</p>
-                        <h2 class="display-6 fw-bold">Gardez le contrôle de vos rendez-vous</h2>
-                    </div>
-                    <div class="col-lg-7">
-                        <p class="lead">
-                            Créer un compte permet d'aller plus loin qu'une simple réservation ponctuelle. Votre espace
-                            conserve les informations utiles et vous permet de retrouver vos rendez-vous au fil du temps.
-                        </p>
-                        <p class="text-secondary">
-                            Vous pouvez créer et personnaliser votre agenda, partager votre lien de réservation,
-                            consulter l'historique des rendez-vous pris, suivre les demandes en cours et associer vos
-                            réservations à votre profil. Selon vos préférences, vous pouvez également recevoir des
-                            notifications par e-mail et des rappels avant vos rendez-vous.
-                        </p>
-                    </div>
+                <div class="text-center mx-auto mb-5" style="max-width: 760px;">
+                    <p class="text-primary text-uppercase fw-semibold small mb-2">Pourquoi créer un compte ?</p>
+                    <h2 class="display-6 fw-bold">Un espace pour mieux suivre votre organisation</h2>
+                    <p class="lead text-secondary mb-0">
+                        Un compte vous permet de profiter pleinement de TestStrategy, que vous souhaitiez gérer votre
+                        propre agenda ou simplement conserver une trace de vos rendez-vous.
+                    </p>
                 </div>
 
-                <div class="row g-4 mt-3">
-                    <div class="col-md-4">
-                        <h3 class="h5">Pour créer votre agenda</h3>
-                        <p class="text-secondary">
-                            Choisissez vos horaires, vos durées de rendez-vous, vos temps de séparation et vos
-                            éventuelles périodes d'indisponibilité.
+                <div class="d-grid gap-4 mx-auto" style="max-width: 900px;">
+                    <article class="feature-card card rounded-4 p-4 p-md-5">
+                        <h3 class="h4">Créer votre propre agenda</h3>
+                        <p class="text-secondary mb-0">
+                            Définissez vos horaires de disponibilité, la durée de vos rendez-vous et le délai entre
+                            deux réservations. Vous pouvez également ajouter des périodes d'indisponibilité,
+                            personnaliser votre page et partager votre lien avec vos contacts.
                         </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="h5">Pour suivre vos réservations</h3>
-                        <p class="text-secondary">
-                            Retrouvez votre historique, consultez l'état de chaque demande et gérez les rendez-vous
-                            liés à votre compte.
+                    </article>
+                    <article class="feature-card card rounded-4 p-4 p-md-5">
+                        <h3 class="h4">Suivre vos rendez-vous</h3>
+                        <p class="text-secondary mb-0">
+                            Retrouvez l'historique des rendez-vous pris depuis votre compte, suivez l'état de vos
+                            demandes et gardez vos réservations associées à votre profil. Vous pouvez aussi recevoir
+                            les notifications et les rappels correspondant à vos préférences.
                         </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="h5">Pour personnaliser votre expérience</h3>
-                        <p class="text-secondary">
-                            Ajoutez des informations à votre page d'agenda et partagez-la facilement, notamment par
-                            e-mail, avec les personnes de votre choix.
-                        </p>
-                    </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a class="btn btn-primary btn-lg px-4" href="/register">Créer mon compte</a>
+                    <a class="btn btn-outline-primary btn-lg px-4 ms-2" href="/login">Me connecter</a>
                 </div>
             </div>
         </section>
