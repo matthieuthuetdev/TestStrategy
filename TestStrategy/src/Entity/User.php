@@ -49,12 +49,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'owner', targetEntity: Schedule::class, orphanRemoval: true)]
     private Collection $schedules;
 
+    /** @var Collection<int, Appointment> */
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Appointment::class)]
+    private Collection $appointments;
+
     public function __construct()
     {
         $now = new \DateTimeImmutable();
         $this->createdAt = $now;
         $this->updatedAt = $now;
         $this->schedules = new ArrayCollection();
+        $this->appointments = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -181,6 +186,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function removeSchedule(Schedule $schedule): static
     {
         $this->schedules->removeElement($schedule);
+
+        return $this;
+    }
+
+    /** @return Collection<int, Appointment> */
+    public function getAppointments(): Collection
+    {
+        return $this->appointments;
+    }
+
+    public function addAppointment(Appointment $appointment): static
+    {
+        if (!$this->appointments->contains($appointment)) {
+            $this->appointments->add($appointment);
+            $appointment->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAppointment(Appointment $appointment): static
+    {
+        $this->appointments->removeElement($appointment);
 
         return $this;
     }
