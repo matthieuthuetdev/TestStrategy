@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Se connecter | TestStrategy{% endblock %}
+
+{% block body %}
+    <main class="signin-page d-flex align-items-center py-5">
+        <div class="container">
+            <div class="signin-card mx-auto p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <h1 class="h2 mb-2">Se connecter</h1>
+                    <p class="text-secondary mb-0">Accédez à votre espace TestStrategy.</p>
+                </div>
+
+                {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        Adresse e-mail ou mot de passe incorrect.
+                    </div>
+                {% endif %}
+
+                {{ form_start(form, { action: path('sign_in'), method: 'POST' }) }}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.password) }}
+
+                    <button class="btn btn-primary w-100 mt-3" type="submit">Se connecter</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </main>
+{% endblock %}
