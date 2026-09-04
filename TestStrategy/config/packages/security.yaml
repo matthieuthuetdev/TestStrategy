@@ -22,7 +22,7 @@ security:
 
             form_login:
                 login_path: sign_in
-                check_path: sign_in
+                check_path: /sign-in-check
                 username_parameter: email
                 password_parameter: password
                 enable_csrf: true

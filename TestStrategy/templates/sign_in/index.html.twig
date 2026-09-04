@@ -11,9 +11,13 @@
                     <p class="text-secondary mb-0">Accédez à votre espace TestStrategy.</p>
                 </div>
 
-                {% if error %}
+                {% if not form.vars.valid %}
                     <div class="alert alert-danger" role="alert">
-                        Adresse e-mail ou mot de passe incorrect.
+                        <ul class="mb-0">
+                            {% for formError in form.vars.errors %}
+                                <li>{{ formError.message }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 {% endif %}
 
