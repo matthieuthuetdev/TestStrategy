@@ -14,3 +14,16 @@ body {
     border-radius: 1rem;
     box-shadow: 0 0.75rem 2rem rgba(23, 32, 51, 0.08);
 }
+
+.signin-card label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.signin-card input {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
