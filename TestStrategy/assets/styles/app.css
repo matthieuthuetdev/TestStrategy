@@ -5,6 +5,13 @@ body {
     font-family: Georgia, 'Times New Roman', serif;
 }
 
+.signin-page, .signup-page { min-height: 100vh; background: #fff; }
+.signin-card, .signup-card { width: 100%; max-width: 30rem; background: #fff; border: 1px solid #dfe6ee; border-radius: 1rem; }
+.signin-card label, .signup-card label { display: block; margin-bottom: .45rem; }
+.signin-card input, .signup-card input { display: block; box-sizing: border-box; width: 100%; padding: .7rem .8rem; border: 1px solid #cbd6e1; border-radius: .4rem; font: inherit; }
+.signin-card .mb-3, .signup-card .mb-3 { margin-bottom: 1rem !important; }
+.signin-card .form-control, .signup-card .form-control { min-height: 2.75rem; }
+
 .dashboard-shell { display: flex; min-height: 100vh; }
 .dashboard-sidebar { display: flex; flex-direction: column; width: 15rem; padding: 2rem 1.25rem; border-right: 1px solid #e1e6eb; background: #fff; }
 .dashboard-brand { display: block; margin-bottom: 3rem; color: #15263d; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
