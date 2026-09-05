@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte | TestStrategy{% endblock %}
+
+{% block body %}
+    <div class="dashboard-shell">
+        <aside class="dashboard-sidebar">
+            <a class="dashboard-brand" href="{{ path('dashboard') }}">TestStrategy</a>
+            <nav aria-label="Menu du compte">
+                <a class="dashboard-nav-link active" href="{{ path('account') }}">Mon compte</a>
+                <a class="dashboard-nav-link disabled" href="#">Mes agendas</a>
+                <a class="dashboard-nav-link disabled" href="#">Mes rendez-vous</a>
+            </nav>
+        </aside>
+        <main class="dashboard-content">
+            <div class="dashboard-topbar">
+                <span class="dashboard-eyebrow">Espace personnel</span>
+                <a class="dashboard-button" href="{{ path('dashboard') }}">Retour au dashboard</a>
+            </div>
+
+            <section class="account-card">
+                <div class="account-heading">
+                    <div>
+                        <p class="dashboard-kicker">Vos informations</p>
+                        <h1>Mon compte</h1>
+                        <p>Consultez et mettez à jour les informations associées à votre compte.</p>
+                    </div>
+                    <a class="dashboard-button" href="#account-form">Modifier</a>
+                </div>
+
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">{{ message }}</div>
+                {% endfor %}
+
+                <div class="account-summary">
+                    <div><span>Prénom</span><strong>{{ user.firstName }}</strong></div>
+                    <div><span>Nom</span><strong>{{ user.lastName }}</strong></div>
+                    <div><span>Adresse e-mail</span><strong>{{ user.email }}</strong></div>
+                </div>
+
+                <div id="account-form" class="account-form-wrapper">
+                    <h2>Modifier mes informations</h2>
+                    {{ form_start(form, { attr: { class: 'account-form' } }) }}
+                        {{ form_errors(form) }}
+                        {{ form_row(form.firstName) }}
+                        {{ form_row(form.lastName) }}
+                        {{ form_row(form.email) }}
+                        <div class="password-section">
+                            <h3>Modifier le mot de passe</h3>
+                            <p>Laissez ces champs vides si vous ne souhaitez pas modifier votre mot de passe.</p>
+                            {{ form_row(form.currentPassword) }}
+                            {{ form_row(form.password.first) }}
+                            <ul class="password-requirements">
+                                <li>Au moins 8 caractères</li>
+                                <li>Au moins une lettre minuscule</li>
+                                <li>Au moins une lettre majuscule</li>
+                                <li>Au moins un chiffre</li>
+                                <li>Au moins un caractère spécial</li>
+                            </ul>
+                            {{ form_row(form.password.second) }}
+                        </div>
+                        <button class="dashboard-button account-submit" type="submit">Enregistrer les modifications</button>
+                    {{ form_end(form) }}
+                </div>
+            </section>
+        </main>
+    </div>
+{% endblock %}

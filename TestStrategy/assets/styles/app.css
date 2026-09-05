@@ -1,3 +1,41 @@
 body {
-    background-color: skyblue;
+    margin: 0;
+    color: #15263d;
+    background: #f4f7fb;
+    font-family: Georgia, 'Times New Roman', serif;
 }
+
+.dashboard-shell { display: flex; min-height: 100vh; }
+.dashboard-sidebar { width: 15rem; padding: 2rem 1.25rem; color: #fff; background: #15263d; }
+.dashboard-brand { display: block; margin-bottom: 3rem; color: #fff; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+.dashboard-nav-link { display: block; padding: .75rem 1rem; margin-bottom: .5rem; color: #dce7f2; border-radius: .5rem; text-decoration: none; }
+.dashboard-nav-link.active, .dashboard-nav-link:hover { color: #15263d; background: #d5e8f5; }
+.dashboard-nav-link.disabled { opacity: .55; cursor: not-allowed; }
+.dashboard-content { flex: 1; padding: 2rem 5vw; }
+.dashboard-topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 4rem; }
+.dashboard-eyebrow, .dashboard-kicker { color: #47718f; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.dashboard-button { display: inline-block; padding: .7rem 1.1rem; color: #fff; background: #1577d4; border: 0; border-radius: .4rem; font-family: inherit; font-size: 1rem; text-decoration: none; cursor: pointer; }
+.dashboard-button:hover { color: #fff; background: #0e61b0; }
+.dashboard-welcome { max-width: 42rem; }
+.dashboard-welcome h1, .account-heading h1 { margin: .5rem 0 1rem; font-size: clamp(2rem, 4vw, 3.5rem); }
+.dashboard-welcome p:last-child, .account-heading p { color: #62758a; font-size: 1.1rem; line-height: 1.7; }
+.account-card { max-width: 58rem; padding: 2.5rem; background: #fff; border: 1px solid #dfe6ee; border-radius: 1rem; box-shadow: 0 .75rem 2rem rgba(23, 32, 51, .08); }
+.account-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e5ebf1; }
+.account-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1.5rem 0; }
+.account-summary div { padding: 1rem; background: #f4f7fb; border-radius: .5rem; }
+.account-summary span { display: block; margin-bottom: .4rem; color: #62758a; font-size: .85rem; }
+.account-summary strong { overflow-wrap: anywhere; }
+.account-form-wrapper { padding-top: 1rem; }
+.account-form-wrapper h2 { margin-bottom: 1.5rem; }
+.account-form label { display: block; margin-bottom: .45rem; }
+.account-form input { display: block; box-sizing: border-box; width: 100%; padding: .7rem .8rem; margin-bottom: 1rem; border: 1px solid #cbd6e1; border-radius: .4rem; font: inherit; }
+.account-form ul { color: #62758a; }
+.password-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #e5ebf1; }
+.password-section h3 { margin-bottom: .4rem; }
+.password-section p { color: #62758a; }
+.password-requirements { margin: -.35rem 0 1rem; padding-left: 1.25rem; line-height: 1.7; }
+.account-submit { margin-top: .5rem; }
+.alert { padding: 1rem; margin: 1.5rem 0; border-radius: .4rem; }
+.alert-success { color: #145c36; background: #d9f2e3; }
+.form-error-message, .account-form ul.form-errors { color: #842029; background: #f8d7da; }
+@media (max-width: 700px) { .dashboard-shell { display: block; } .dashboard-sidebar { width: auto; } .dashboard-content { padding: 1.5rem; } .dashboard-topbar { margin-bottom: 2rem; } .account-card { padding: 1.25rem; } .account-heading, .account-summary { display: block; } .account-heading .dashboard-button { margin-top: 1rem; } .account-summary div { margin-bottom: .75rem; } }
