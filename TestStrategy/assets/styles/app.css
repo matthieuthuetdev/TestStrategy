@@ -1,3 +1,29 @@
 body {
     background-color: skyblue;
 }
+
+.signup-page {
+    min-height: 100vh;
+    background: #f4f7fb;
+}
+
+.signup-card {
+    max-width: 30rem;
+    background: #fff;
+    border: 1px solid #dfe6ee;
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 2rem rgba(23, 32, 51, 0.08);
+}
+
+.signup-card label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.signup-card input {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
