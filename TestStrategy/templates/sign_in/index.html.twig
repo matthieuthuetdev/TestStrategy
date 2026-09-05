@@ -11,6 +11,10 @@
                     <p class="text-secondary mb-0">Accédez à votre espace TestStrategy.</p>
                 </div>
 
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success" role="alert">{{ message }}</div>
+                {% endfor %}
+
                 {% if not form.vars.valid %}
                     <div class="alert alert-danger" role="alert">
                         <ul class="mb-0">
