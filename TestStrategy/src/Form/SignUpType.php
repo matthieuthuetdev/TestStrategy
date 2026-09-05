@@ -11,6 +11,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class SignUpType extends AbstractType
 {
@@ -53,9 +54,17 @@ class SignUpType extends AbstractType
                 'error_bubbling' => true,
                 'constraints' => [
                     new NotBlank(message: 'Veuillez renseigner votre mot de passe.'),
+                    new Regex(pattern: '/[a-z]/', message: 'Votre mot de passe doit contenir au moins une lettre minuscule.'),
+                    new Regex(pattern: '/[A-Z]/', message: 'Votre mot de passe doit contenir au moins une lettre majuscule.'),
+                    new Regex(pattern: '/[0-9]/', message: 'Votre mot de passe doit contenir au moins un chiffre.'),
+                    new Regex(pattern: '/[^a-zA-Z0-9\s]/', message: 'Votre mot de passe doit contenir au moins un caractère spécial.'),
                     new Length(min: 8, max: 255, minMessage: 'Votre mot de passe doit contenir au moins {{ limit }} caractères.'),
                 ],
-                'attr' => ['autocomplete' => 'new-password'],
+                'attr' => [
+                    'autocomplete' => 'new-password',
+                    'minlength' => 8,
+                    'pattern' => '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9\\s]).{8,}',
+                ],
             ])
             ->add('confirmPassword', PasswordType::class, [
                 'label' => 'Confirmer le mot de passe',
