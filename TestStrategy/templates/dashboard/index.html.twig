@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard | TestStrategy{% endblock %}
+
+{% block body %}
+    <div class="dashboard-shell">
+        <aside class="dashboard-sidebar">
+            <a class="dashboard-brand" href="{{ path('dashboard') }}">TestStrategy</a>
+            <nav aria-label="Menu du compte">
+                <a class="dashboard-nav-link active" href="{{ path('account') }}">Mon compte</a>
+            </nav>
+            <div class="dashboard-sidebar-footer">
+                <a class="dashboard-logout" href="{{ app.request.basePath }}/logout">Se déconnecter</a>
+            </div>
+        </aside>
+        <main class="dashboard-content">
+            <div class="dashboard-topbar">
+                <span class="dashboard-eyebrow">Espace personnel</span>
+                <a class="dashboard-button" href="{{ path('account') }}">Mon compte</a>
+            </div>
+            <section class="dashboard-welcome">
+                <p class="dashboard-kicker">Bienvenue dans votre espace</p>
+                <h1>Bonjour {{ user.firstName }} {{ user.lastName }}</h1>
+                <p>Retrouvez ici les outils qui vous aideront à organiser vos disponibilités et vos rendez-vous.</p>
+            </section>
+        </main>
+    </div>
+{% endblock %}
