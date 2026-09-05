@@ -46,7 +46,7 @@ class SignUpController extends AbstractController
 
                 $this->addFlash('success', 'Votre compte a été créé. Vous pouvez maintenant vous connecter.');
 
-                return $this->redirectToRoute('sign_up');
+                return $this->redirectToRoute('sign_in');
             }
         }
 
