@@ -38,7 +38,7 @@ class SignInController extends AbstractController
             if (!$user || !$passwordHasher->isPasswordValid($user, $password)) {
                 $form->addError(new FormError('L’adresse e-mail ou le mot de passe est incorrect.'));
             } else {
-                return $security->login($user, 'form_login') ?? $this->redirectToRoute('sign_in');
+                return $security->login($user, 'form_login') ?? $this->redirectToRoute('dashboard');
             }
         }
 
