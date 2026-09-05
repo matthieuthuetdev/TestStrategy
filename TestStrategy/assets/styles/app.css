@@ -6,10 +6,13 @@ body {
 }
 
 .dashboard-shell { display: flex; min-height: 100vh; }
-.dashboard-sidebar { width: 15rem; padding: 2rem 1.25rem; border-right: 1px solid #e1e6eb; background: #fff; }
+.dashboard-sidebar { display: flex; flex-direction: column; width: 15rem; padding: 2rem 1.25rem; border-right: 1px solid #e1e6eb; background: #fff; }
 .dashboard-brand { display: block; margin-bottom: 3rem; color: #15263d; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
 .dashboard-nav-link { display: block; padding: .75rem 1rem; margin-bottom: .5rem; color: #526274; border: 1px solid transparent; border-radius: .4rem; text-decoration: none; }
 .dashboard-nav-link.active, .dashboard-nav-link:hover { color: #15263d; border-color: #d9e0e7; background: #fff; }
+.dashboard-sidebar-footer { margin-top: auto; padding-top: 2rem; }
+.dashboard-logout { display: block; padding: .7rem 1rem; color: #842029; border: 1px solid #f1c7cb; border-radius: .4rem; text-decoration: none; }
+.dashboard-logout:hover { color: #842029; border-color: #e8aeb4; background: #fff; }
 .dashboard-content { flex: 1; padding: 2rem 5vw; }
 .dashboard-topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 4rem; }
 .dashboard-eyebrow, .dashboard-kicker { color: #47718f; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }

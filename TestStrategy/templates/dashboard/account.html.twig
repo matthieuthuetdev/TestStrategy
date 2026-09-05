@@ -9,6 +9,9 @@
             <nav aria-label="Menu du compte">
                 <a class="dashboard-nav-link active" href="{{ path('account') }}">Mon compte</a>
             </nav>
+            <div class="dashboard-sidebar-footer">
+                <a class="dashboard-logout" href="{{ app.request.basePath }}/logout">Se déconnecter</a>
+            </div>
         </aside>
         <main class="dashboard-content">
             <div class="dashboard-topbar">
